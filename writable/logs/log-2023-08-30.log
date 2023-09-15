@@ -1,0 +1,646 @@
+INFO - 2023-08-30 07:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 07:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 07:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 07:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-30 07:43:50 --> mysqli_sql_exception: Unknown column 'tanggal_permohonan' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CAS...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CAS...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CAS...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CAS...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(47): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-30 07:43:50 --> Unknown column 'tanggal_permohonan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(tanggal_permohonan) IS NULL
+AND YEAR(tanggal_permohonan) IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(tanggal_permohonan) IS NULL
+AND YEAR(tanggal_permohonan) IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(tanggal_permohonan) IS NULL
+AND YEAR(tanggal_permohonan) IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND MONTH(tanggal_permohonan) IS NULL
+AND YEAR(tanggal_permohonan) IS NULL', [...], false)
+ 5 APPPATH\Controllers\Rekapan.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-30 11:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:54:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 11:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-30 12:01:57 --> mysqli_sql_exception: Unknown column 'nama_kolom_tanggal' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CAS...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CAS...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CAS...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CAS...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-30 12:01:57 --> Unknown column 'nama_kolom_tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(nama_kolom_tanggal) IS NULL
+AND YEAR(nama_kolom_tanggal) IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(nama_kolom_tanggal) IS NULL
+AND YEAR(nama_kolom_tanggal) IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(nama_kolom_tanggal) IS NULL
+AND YEAR(nama_kolom_tanggal) IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND MONTH(nama_kolom_tanggal) IS NULL
+AND YEAR(nama_kolom_tanggal) IS NULL', [...], false)
+ 5 APPPATH\Controllers\Rekapan.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 12:05:00 --> mysqli_sql_exception: Unknown column 'bulan' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CAS...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CAS...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CAS...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CAS...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-30 12:05:01 --> Unknown column 'bulan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', [...], false)
+ 5 APPPATH\Controllers\Rekapan.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 12:07:11 --> mysqli_sql_exception: Unknown column 'bulan' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CAS...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CAS...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CAS...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CAS...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-30 12:07:11 --> Unknown column 'bulan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', [...], false)
+ 5 APPPATH\Controllers\Rekapan.php(49): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 12:10:29 --> mysqli_sql_exception: Unknown column 'nama_kolom_tanggal' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CAS...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CAS...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CAS...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CAS...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-30 12:10:29 --> Unknown column 'nama_kolom_tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(nama_kolom_tanggal) IS NULL
+AND YEAR(nama_kolom_tanggal) IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(nama_kolom_tanggal) IS NULL
+AND YEAR(nama_kolom_tanggal) IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(nama_kolom_tanggal) IS NULL
+AND YEAR(nama_kolom_tanggal) IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND MONTH(nama_kolom_tanggal) IS NULL
+AND YEAR(nama_kolom_tanggal) IS NULL', [...], false)
+ 5 APPPATH\Controllers\Rekapan.php(49): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 12:10:30 --> mysqli_sql_exception: Unknown column 'nama_kolom_tanggal' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CAS...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CAS...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CAS...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CAS...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-30 12:10:30 --> Unknown column 'nama_kolom_tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(nama_kolom_tanggal) IS NULL
+AND YEAR(nama_kolom_tanggal) IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(nama_kolom_tanggal) IS NULL
+AND YEAR(nama_kolom_tanggal) IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(nama_kolom_tanggal) IS NULL
+AND YEAR(nama_kolom_tanggal) IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND MONTH(nama_kolom_tanggal) IS NULL
+AND YEAR(nama_kolom_tanggal) IS NULL', [...], false)
+ 5 APPPATH\Controllers\Rekapan.php(49): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 12:11:09 --> mysqli_sql_exception: Unknown column 'bulan' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CAS...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CAS...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CAS...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CAS...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-30 12:11:09 --> Unknown column 'bulan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', [...], false)
+ 5 APPPATH\Controllers\Rekapan.php(49): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 12:12:35 --> mysqli_sql_exception: Unknown column 'bulan' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CAS...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CAS...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CAS...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CAS...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-30 12:12:36 --> Unknown column 'bulan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', [...], false)
+ 5 APPPATH\Controllers\Rekapan.php(49): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 12:12:44 --> mysqli_sql_exception: Unknown column 'bulan' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CAS...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CAS...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CAS...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CAS...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(49): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-30 12:12:44 --> Unknown column 'bulan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', [...], false)
+ 5 APPPATH\Controllers\Rekapan.php(49): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 12:14:52 --> mysqli_sql_exception: Unknown column 'bulan' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CAS...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CAS...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CAS...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CAS...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(50): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-30 12:14:52 --> Unknown column 'bulan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', [...], false)
+ 5 APPPATH\Controllers\Rekapan.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 12:15:34 --> Too few arguments to function CodeIgniter\Database\BaseBuilder::join(), 0 passed in C:\xampp\htdocs\surat\app\Controllers\Rekapan.php on line 50 and at least 2 expected
+in SYSTEMPATH\Database\BaseBuilder.php on line 617.
+ 1 APPPATH\Controllers\Rekapan.php(50): CodeIgniter\Database\BaseBuilder->join()
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 12:16:09 --> mysqli_sql_exception: Unknown column 'bulan' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CAS...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CAS...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CAS...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CAS...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(50): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-30 12:16:09 --> Unknown column 'bulan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND MONTH(bulan) IS NULL
+AND YEAR(tahun) IS NULL', [...], false)
+ 5 APPPATH\Controllers\Rekapan.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-30 12:18:33 --> mysqli_sql_exception: Unknown column 'tanggal' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CAS...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CAS...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CAS...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CAS...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(50): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-30 12:18:33 --> Unknown column 'tanggal' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(tanggal) IS NULL
+AND YEAR(tanggal) IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(tanggal) IS NULL
+AND YEAR(tanggal) IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = \'1\'
+AND MONTH(tanggal) IS NULL
+AND YEAR(tanggal) IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending`, SUM((CASE WHEN status = 1 THEN 1 ELSE 0 END)) AS `jumlah_disetujui`, SUM((CASE WHEN status = 2 THEN 1 ELSE 0 END)) AS `jumlah_ditolak`
+FROM `pengantar_ktp`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND MONTH(tanggal) IS NULL
+AND YEAR(tanggal) IS NULL', [...], false)
+ 5 APPPATH\Controllers\Rekapan.php(50): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-30 12:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 12:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-30 13:11:15 --> Call to undefined method App\Models\KtpModel::getJumlahStatusByKategori
+in SYSTEMPATH\Model.php on line 838.
+ 1 APPPATH\Controllers\Rekapan.php(41): CodeIgniter\Model->__call('getJumlahStatusByKategori', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 13:13:18 --> Call to undefined method App\Models\KkModel::getJumlahStatusByKategori
+in SYSTEMPATH\Model.php on line 838.
+ 1 APPPATH\Controllers\Rekapan.php(45): CodeIgniter\Model->__call('getJumlahStatusByKategori', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 13:14:09 --> Call to undefined method App\Models\DomisiliModel::getJumlahStatusByKategori
+in SYSTEMPATH\Model.php on line 838.
+ 1 APPPATH\Controllers\Rekapan.php(61): CodeIgniter\Model->__call('getJumlahStatusByKategori', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-30 13:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:31:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-30 13:47:42 --> Undefined variable $jumlahPending
+in APPPATH\Controllers\Rekapan.php on line 39.
+ 1 APPPATH\Controllers\Rekapan.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jumlahPending', 'C:\\xampp\\htdocs\\surat\\app\\Controllers\\Rekapan.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-30 13:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 13:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 14:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-30 14:19:45 --> Undefined array key "dibatalkan"
+in APPPATH\Views\rekapan.php on line 50.
+ 1 APPPATH\Views\rekapan.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dibatalkan"', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 50)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(54): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-30 14:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 14:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 14:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 14:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-30 14:50:24 --> Undefined array key "dibatalkan"
+in APPPATH\Views\rekapan.php on line 51.
+ 1 APPPATH\Views\rekapan.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dibatalkan"', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 51)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(82): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-30 14:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 14:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:36:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:40:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:48:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:57:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 16:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:00:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:20:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:24:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 17:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-30 17:33:11 --> Call to undefined method App\Models\PermohonanSuratModel::getPermohonanByStatus
+in SYSTEMPATH\Model.php on line 838.
+ 1 APPPATH\Controllers\Permohonan.php(11): CodeIgniter\Model->__call('getPermohonanByStatus', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Permohonan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permohonan))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-30 17:33:39 --> Call to undefined method App\Models\PermohonanSuratModel::getPermohonanByStatus
+in SYSTEMPATH\Model.php on line 838.
+ 1 APPPATH\Controllers\Permohonan.php(11): CodeIgniter\Model->__call('getPermohonanByStatus', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Permohonan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Permohonan))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-30 17:34:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 18:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 18:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 18:38:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 18:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-30 18:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

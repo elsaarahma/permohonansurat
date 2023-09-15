@@ -1,0 +1,1464 @@
+INFO - 2023-08-10 02:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 02:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 02:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 02:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 02:05:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 02:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 02:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 02:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 02:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 02:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:07:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:07:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:23:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 03:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-10 03:36:05 --> mysqli_sql_exception: Unknown column 'ks.id_kategori_surat' in 'field list' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`id...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id...', Array, false)
+#4 C:\xampp\htdocs\surat\system\Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(29): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#9 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-10 03:36:05 --> Unknown column 'ks.id_kategori_surat' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`id_kategori_surat`, `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`id_kategori_surat` = `pk`.`id_kategori_surat`
+GROUP BY `ks`.`id_kategori_surat`, `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_kategori_surat`, `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`id_kategori_surat` = `pk`.`id_kategori_surat`
+GROUP BY `ks`.`id_kategori_surat`, `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_kategori_surat`, `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`id_kategori_surat` = `pk`.`id_kategori_surat`
+GROUP BY `ks`.`id_kategori_surat`, `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_kategori_surat`, `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`id_kategori_surat` = `pk`.`id_kategori_surat`
+GROUP BY `ks`.`id_kategori_surat`, `ks`.`kategori_surat`', [...], false)
+ 5 SYSTEMPATH\Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\PermohonanSuratModel.php(29): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 03:39:36 --> mysqli_sql_exception: Unknown column 'ks.kategori_surat' in 'field list' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\system\Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(29): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#9 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-10 03:39:36 --> Unknown column 'ks.kategori_surat' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`nama_kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`nama_kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`nama_kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`nama_kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [...], false)
+ 5 SYSTEMPATH\Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\PermohonanSuratModel.php(29): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 03:40:34 --> mysqli_sql_exception: Unknown column 'ks.kategori_surat' in 'field list' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\system\Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(29): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#9 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-10 03:40:34 --> Unknown column 'ks.kategori_surat' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`id_kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`id_kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`id_kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`id_kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [...], false)
+ 5 SYSTEMPATH\Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\PermohonanSuratModel.php(29): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 03:44:57 --> mysqli_sql_exception: Unknown column 'ks.kategori_surat' in 'field list' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\system\Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(29): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#9 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-10 03:44:57 --> Unknown column 'ks.kategori_surat' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `permohonan_surat`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [...], false)
+ 5 SYSTEMPATH\Model.php(836): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\PermohonanSuratModel.php(29): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 04:11:57 --> mysqli_sql_exception: Unknown column 'pk.kategori_surat' in 'on clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-08-10 04:11:57 --> mysqli_sql_exception: Unknown column 'pk.kategori_surat' in 'on clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-08-10 04:11:57 --> mysqli_sql_exception: Unknown column 'pk.kategori_surat' in 'on clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-10 04:11:57 --> Unknown column 'pk.kategori_surat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [], false)
+ 5 APPPATH\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-10 04:11:57 --> Unknown column 'pk.kategori_surat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [], false)
+ 5 APPPATH\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-10 04:11:57 --> Unknown column 'pk.kategori_surat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [], false)
+ 5 APPPATH\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 04:11:57 --> mysqli_sql_exception: Unknown column 'pk.kategori_surat' in 'on clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-10 04:11:57 --> Unknown column 'pk.kategori_surat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [], false)
+ 5 APPPATH\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Rekapan.php(27): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 04:17:00 --> mysqli_sql_exception: Unknown column 'pk.kategori_surat' in 'on clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2023-08-10 04:17:00 --> mysqli_sql_exception: Unknown column 'pk.kategori_surat' in 'on clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-10 04:17:00 --> Unknown column 'pk.kategori_surat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [], false)
+ 5 APPPATH\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-10 04:17:00 --> Unknown column 'pk.kategori_surat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [], false)
+ 5 APPPATH\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 04:17:00 --> mysqli_sql_exception: Unknown column 'pk.kategori_surat' in 'on clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-10 04:17:00 --> Unknown column 'pk.kategori_surat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [], false)
+ 5 APPPATH\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 04:17:02 --> mysqli_sql_exception: Unknown column 'pk.kategori_surat' in 'on clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-10 04:17:02 --> Unknown column 'pk.kategori_surat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [], false)
+ 5 APPPATH\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 04:17:02 --> mysqli_sql_exception: Unknown column 'pk.kategori_surat' in 'on clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-10 04:17:02 --> Unknown column 'pk.kategori_surat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [], false)
+ 5 APPPATH\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 04:17:47 --> mysqli_sql_exception: Unknown column 'pk.kategori_surat' in 'on clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-10 04:17:47 --> Unknown column 'pk.kategori_surat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [], false)
+ 5 APPPATH\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 04:17:48 --> mysqli_sql_exception: Unknown column 'pk.kategori_surat' in 'on clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-10 04:17:48 --> Unknown column 'pk.kategori_surat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [], false)
+ 5 APPPATH\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 04:17:49 --> mysqli_sql_exception: Unknown column 'pk.kategori_surat' in 'on clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-10 04:17:49 --> Unknown column 'pk.kategori_surat' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, SUM(CASE WHEN pk.status = 0 THEN 1 ELSE 0 END) AS jumlah_pending_pengantar_ktp, SUM(CASE WHEN pk.status = 1 THEN 1 ELSE 0 END) AS jumlah_ditolak_pengantar_ktp, SUM(CASE WHEN pk.status = 2 THEN 1 ELSE 0 END) AS jumlah_disetujui_pengantar_ktp
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `pk` ON `ks`.`kategori_surat` = `pk`.`kategori_surat`
+GROUP BY `ks`.`kategori_surat`', [], false)
+ 5 APPPATH\Models\PermohonanSuratModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Rekapan.php(26): App\Models\PermohonanSuratModel->getRekapStatusByKategoriOrdered()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 04:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 04:23:40 --> Undefined variable $results
+in APPPATH\Views\rekapan.php on line 43.
+ 1 APPPATH\Views\rekapan.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $results', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 43)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(27): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-10 04:23:56 --> Undefined variable $results
+in APPPATH\Controllers\Rekapan.php on line 27.
+ 1 APPPATH\Controllers\Rekapan.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $results', 'C:\\xampp\\htdocs\\surat\\app\\Controllers\\Rekapan.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-10 04:24:37 --> Undefined variable $query
+in APPPATH\Controllers\Rekapan.php on line 27.
+ 1 APPPATH\Controllers\Rekapan.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'C:\\xampp\\htdocs\\surat\\app\\Controllers\\Rekapan.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 04:24:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-10 04:30:29 --> mysqli_sql_exception: Table 'surat.ktp' doesn't exist in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(64): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-10 04:30:29 --> Table 'surat.ktp' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 0) AS jumlah_pending_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 1) AS jumlah_disetujui_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 2) AS jumlah_ditolak_pengantar_ktp, SUM((CASE WHEN kk.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pengantar_kk`, SUM((CASE WHEN kk.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pengantar_kk`, SUM((CASE WHEN kk.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pengantar_kk`, SUM((CASE WHEN waris.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_ahli_waris`, SUM((CASE WHEN waris.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_ahli_waris`, SUM((CASE WHEN waris.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_ahli_waris`, SUM((CASE WHEN kettanah.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_keterangan_tanah`, SUM((CASE WHEN keluar.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_keluar`, SUM((CASE WHEN keluar.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_keluar`, SUM((CASE WHEN keluar.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_keluar`, SUM((CASE WHEN domisili.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_domisili`, SUM((CASE WHEN domisili.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_domisili`, SUM((CASE WHEN domisili.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_domisili`
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `ktp` ON `ks`.`id_kategori_surat` = `ktp`.`id_ktp`
+LEFT JOIN `pengantar_kk` `kk` ON `ks`.`id_kategori_surat` = `kk`.`id_kk`
+LEFT JOIN `ahli_waris` `waris` ON `ks`.`id_kategori_surat` = `waris`.`id_waris`
+LEFT JOIN `keterangan_tanah` `kettanah` ON `ks`.`id_kategori_surat` = `kettanah`.`id_tanah`
+LEFT JOIN `pindah_keluar` `keluar` ON `ks`.`id_kategori_surat` = `keluar`.`id_pindah_keluar`
+LEFT JOIN `pindah_domisili` `domisili` ON `ks`.`id_kategori_surat` = `domisili`.`id_domisili`
+GROUP BY `ks`.`kategori_surat`
+ORDER BY `ks`.`id_kategori_surat` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 0) AS jumlah_pending_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 1) AS jumlah_disetujui_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 2) AS jumlah_ditolak_pengantar_ktp, SUM((CASE WHEN kk.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pengantar_kk`, SUM((CASE WHEN kk.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pengantar_kk`, SUM((CASE WHEN kk.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pengantar_kk`, SUM((CASE WHEN waris.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_ahli_waris`, SUM((CASE WHEN waris.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_ahli_waris`, SUM((CASE WHEN waris.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_ahli_waris`, SUM((CASE WHEN kettanah.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_keterangan_tanah`, SUM((CASE WHEN keluar.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_keluar`, SUM((CASE WHEN keluar.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_keluar`, SUM((CASE WHEN keluar.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_keluar`, SUM((CASE WHEN domisili.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_domisili`, SUM((CASE WHEN domisili.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_domisili`, SUM((CASE WHEN domisili.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_domisili`
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `ktp` ON `ks`.`id_kategori_surat` = `ktp`.`id_ktp`
+LEFT JOIN `pengantar_kk` `kk` ON `ks`.`id_kategori_surat` = `kk`.`id_kk`
+LEFT JOIN `ahli_waris` `waris` ON `ks`.`id_kategori_surat` = `waris`.`id_waris`
+LEFT JOIN `keterangan_tanah` `kettanah` ON `ks`.`id_kategori_surat` = `kettanah`.`id_tanah`
+LEFT JOIN `pindah_keluar` `keluar` ON `ks`.`id_kategori_surat` = `keluar`.`id_pindah_keluar`
+LEFT JOIN `pindah_domisili` `domisili` ON `ks`.`id_kategori_surat` = `domisili`.`id_domisili`
+GROUP BY `ks`.`kategori_surat`
+ORDER BY `ks`.`id_kategori_surat` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 0) AS jumlah_pending_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 1) AS jumlah_disetujui_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 2) AS jumlah_ditolak_pengantar_ktp, SUM((CASE WHEN kk.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pengantar_kk`, SUM((CASE WHEN kk.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pengantar_kk`, SUM((CASE WHEN kk.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pengantar_kk`, SUM((CASE WHEN waris.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_ahli_waris`, SUM((CASE WHEN waris.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_ahli_waris`, SUM((CASE WHEN waris.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_ahli_waris`, SUM((CASE WHEN kettanah.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_keterangan_tanah`, SUM((CASE WHEN keluar.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_keluar`, SUM((CASE WHEN keluar.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_keluar`, SUM((CASE WHEN keluar.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_keluar`, SUM((CASE WHEN domisili.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_domisili`, SUM((CASE WHEN domisili.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_domisili`, SUM((CASE WHEN domisili.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_domisili`
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `ktp` ON `ks`.`id_kategori_surat` = `ktp`.`id_ktp`
+LEFT JOIN `pengantar_kk` `kk` ON `ks`.`id_kategori_surat` = `kk`.`id_kk`
+LEFT JOIN `ahli_waris` `waris` ON `ks`.`id_kategori_surat` = `waris`.`id_waris`
+LEFT JOIN `keterangan_tanah` `kettanah` ON `ks`.`id_kategori_surat` = `kettanah`.`id_tanah`
+LEFT JOIN `pindah_keluar` `keluar` ON `ks`.`id_kategori_surat` = `keluar`.`id_pindah_keluar`
+LEFT JOIN `pindah_domisili` `domisili` ON `ks`.`id_kategori_surat` = `domisili`.`id_domisili`
+GROUP BY `ks`.`kategori_surat`
+ORDER BY `ks`.`id_kategori_surat` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 0) AS jumlah_pending_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 1) AS jumlah_disetujui_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 2) AS jumlah_ditolak_pengantar_ktp, SUM((CASE WHEN kk.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pengantar_kk`, SUM((CASE WHEN kk.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pengantar_kk`, SUM((CASE WHEN kk.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pengantar_kk`, SUM((CASE WHEN waris.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_ahli_waris`, SUM((CASE WHEN waris.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_ahli_waris`, SUM((CASE WHEN waris.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_ahli_waris`, SUM((CASE WHEN kettanah.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_keterangan_tanah`, SUM((CASE WHEN keluar.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_keluar`, SUM((CASE WHEN keluar.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_keluar`, SUM((CASE WHEN keluar.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_keluar`, SUM((CASE WHEN domisili.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_domisili`, SUM((CASE WHEN domisili.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_domisili`, SUM((CASE WHEN domisili.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_domisili`
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `ktp` ON `ks`.`id_kategori_surat` = `ktp`.`id_ktp`
+LEFT JOIN `pengantar_kk` `kk` ON `ks`.`id_kategori_surat` = `kk`.`id_kk`
+LEFT JOIN `ahli_waris` `waris` ON `ks`.`id_kategori_surat` = `waris`.`id_waris`
+LEFT JOIN `keterangan_tanah` `kettanah` ON `ks`.`id_kategori_surat` = `kettanah`.`id_tanah`
+LEFT JOIN `pindah_keluar` `keluar` ON `ks`.`id_kategori_surat` = `keluar`.`id_pindah_keluar`
+LEFT JOIN `pindah_domisili` `domisili` ON `ks`.`id_kategori_surat` = `domisili`.`id_domisili`
+GROUP BY `ks`.`kategori_surat`
+ORDER BY `ks`.`id_kategori_surat` ASC', [], false)
+ 5 APPPATH\Controllers\Rekapan.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-10 04:32:17 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::getResult()
+in APPPATH\Controllers\Rekapan.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 04:43:09 --> mysqli_sql_exception: Table 'surat.ktp' doesn't exist in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`ka...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`ka...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`ka...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`ka...', Array, false)
+#4 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(64): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#6 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-10 04:43:09 --> Table 'surat.ktp' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `ks`.`kategori_surat`, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 0) AS jumlah_pending_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 1) AS jumlah_disetujui_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 2) AS jumlah_ditolak_pengantar_ktp, SUM((CASE WHEN kk.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pengantar_kk`, SUM((CASE WHEN kk.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pengantar_kk`, SUM((CASE WHEN kk.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pengantar_kk`, SUM((CASE WHEN waris.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_ahli_waris`, SUM((CASE WHEN waris.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_ahli_waris`, SUM((CASE WHEN waris.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_ahli_waris`, SUM((CASE WHEN kettanah.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_keterangan_tanah`, SUM((CASE WHEN keluar.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_keluar`, SUM((CASE WHEN keluar.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_keluar`, SUM((CASE WHEN keluar.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_keluar`, SUM((CASE WHEN domisili.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_domisili`, SUM((CASE WHEN domisili.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_domisili`, SUM((CASE WHEN domisili.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_domisili`
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `ktp` ON `ks`.`id_kategori_surat` = `ktp`.`id_ktp`
+LEFT JOIN `pengantar_kk` `kk` ON `ks`.`id_kategori_surat` = `kk`.`id_kk`
+LEFT JOIN `ahli_waris` `waris` ON `ks`.`id_kategori_surat` = `waris`.`id_waris`
+LEFT JOIN `keterangan_tanah` `kettanah` ON `ks`.`id_kategori_surat` = `kettanah`.`id_tanah`
+LEFT JOIN `pindah_keluar` `keluar` ON `ks`.`id_kategori_surat` = `keluar`.`id_pindah_keluar`
+LEFT JOIN `pindah_domisili` `domisili` ON `ks`.`id_kategori_surat` = `domisili`.`id_domisili`
+GROUP BY `ks`.`kategori_surat`
+ORDER BY `ks`.`id_kategori_surat` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`kategori_surat`, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 0) AS jumlah_pending_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 1) AS jumlah_disetujui_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 2) AS jumlah_ditolak_pengantar_ktp, SUM((CASE WHEN kk.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pengantar_kk`, SUM((CASE WHEN kk.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pengantar_kk`, SUM((CASE WHEN kk.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pengantar_kk`, SUM((CASE WHEN waris.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_ahli_waris`, SUM((CASE WHEN waris.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_ahli_waris`, SUM((CASE WHEN waris.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_ahli_waris`, SUM((CASE WHEN kettanah.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_keterangan_tanah`, SUM((CASE WHEN keluar.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_keluar`, SUM((CASE WHEN keluar.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_keluar`, SUM((CASE WHEN keluar.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_keluar`, SUM((CASE WHEN domisili.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_domisili`, SUM((CASE WHEN domisili.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_domisili`, SUM((CASE WHEN domisili.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_domisili`
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `ktp` ON `ks`.`id_kategori_surat` = `ktp`.`id_ktp`
+LEFT JOIN `pengantar_kk` `kk` ON `ks`.`id_kategori_surat` = `kk`.`id_kk`
+LEFT JOIN `ahli_waris` `waris` ON `ks`.`id_kategori_surat` = `waris`.`id_waris`
+LEFT JOIN `keterangan_tanah` `kettanah` ON `ks`.`id_kategori_surat` = `kettanah`.`id_tanah`
+LEFT JOIN `pindah_keluar` `keluar` ON `ks`.`id_kategori_surat` = `keluar`.`id_pindah_keluar`
+LEFT JOIN `pindah_domisili` `domisili` ON `ks`.`id_kategori_surat` = `domisili`.`id_domisili`
+GROUP BY `ks`.`kategori_surat`
+ORDER BY `ks`.`id_kategori_surat` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`kategori_surat`, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 0) AS jumlah_pending_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 1) AS jumlah_disetujui_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 2) AS jumlah_ditolak_pengantar_ktp, SUM((CASE WHEN kk.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pengantar_kk`, SUM((CASE WHEN kk.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pengantar_kk`, SUM((CASE WHEN kk.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pengantar_kk`, SUM((CASE WHEN waris.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_ahli_waris`, SUM((CASE WHEN waris.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_ahli_waris`, SUM((CASE WHEN waris.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_ahli_waris`, SUM((CASE WHEN kettanah.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_keterangan_tanah`, SUM((CASE WHEN keluar.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_keluar`, SUM((CASE WHEN keluar.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_keluar`, SUM((CASE WHEN keluar.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_keluar`, SUM((CASE WHEN domisili.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_domisili`, SUM((CASE WHEN domisili.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_domisili`, SUM((CASE WHEN domisili.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_domisili`
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `ktp` ON `ks`.`id_kategori_surat` = `ktp`.`id_ktp`
+LEFT JOIN `pengantar_kk` `kk` ON `ks`.`id_kategori_surat` = `kk`.`id_kk`
+LEFT JOIN `ahli_waris` `waris` ON `ks`.`id_kategori_surat` = `waris`.`id_waris`
+LEFT JOIN `keterangan_tanah` `kettanah` ON `ks`.`id_kategori_surat` = `kettanah`.`id_tanah`
+LEFT JOIN `pindah_keluar` `keluar` ON `ks`.`id_kategori_surat` = `keluar`.`id_pindah_keluar`
+LEFT JOIN `pindah_domisili` `domisili` ON `ks`.`id_kategori_surat` = `domisili`.`id_domisili`
+GROUP BY `ks`.`kategori_surat`
+ORDER BY `ks`.`id_kategori_surat` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`kategori_surat`, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 0) AS jumlah_pending_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 1) AS jumlah_disetujui_pengantar_ktp, (SELECT COUNT(*) FROM ktp WHERE ktp.status = 2) AS jumlah_ditolak_pengantar_ktp, SUM((CASE WHEN kk.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pengantar_kk`, SUM((CASE WHEN kk.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pengantar_kk`, SUM((CASE WHEN kk.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pengantar_kk`, SUM((CASE WHEN waris.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_ahli_waris`, SUM((CASE WHEN waris.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_ahli_waris`, SUM((CASE WHEN waris.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_ahli_waris`, SUM((CASE WHEN kettanah.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_keterangan_tanah`, SUM((CASE WHEN kettanah.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_keterangan_tanah`, SUM((CASE WHEN keluar.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_keluar`, SUM((CASE WHEN keluar.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_keluar`, SUM((CASE WHEN keluar.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_keluar`, SUM((CASE WHEN domisili.status = 0 THEN 1 ELSE 0 END)) AS `jumlah_pending_pindah_domisili`, SUM((CASE WHEN domisili.status = 1 THEN 1 ELSE 0 END)) AS `jumlah_ditolak_pindah_domisili`, SUM((CASE WHEN domisili.status = 2 THEN 1 ELSE 0 END)) AS `jumlah_disetujui_pindah_domisili`
+FROM `kategori_surat` `ks`
+LEFT JOIN `pengantar_ktp` `ktp` ON `ks`.`id_kategori_surat` = `ktp`.`id_ktp`
+LEFT JOIN `pengantar_kk` `kk` ON `ks`.`id_kategori_surat` = `kk`.`id_kk`
+LEFT JOIN `ahli_waris` `waris` ON `ks`.`id_kategori_surat` = `waris`.`id_waris`
+LEFT JOIN `keterangan_tanah` `kettanah` ON `ks`.`id_kategori_surat` = `kettanah`.`id_tanah`
+LEFT JOIN `pindah_keluar` `keluar` ON `ks`.`id_kategori_surat` = `keluar`.`id_pindah_keluar`
+LEFT JOIN `pindah_domisili` `domisili` ON `ks`.`id_kategori_surat` = `domisili`.`id_domisili`
+GROUP BY `ks`.`kategori_surat`
+ORDER BY `ks`.`id_kategori_surat` ASC', [], false)
+ 5 APPPATH\Controllers\Rekapan.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 04:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 04:44:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 04:44:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 04:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 04:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 04:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 04:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 06:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 06:44:46 --> Undefined variable $tahun_options
+in APPPATH\Views\rekapan.php on line 42.
+ 1 APPPATH\Views\rekapan.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tahun_options', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 42)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(71): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 06:48:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 06:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 06:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 06:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 06:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 06:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 06:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 06:51:35 --> Undefined variable $tahun_options
+in APPPATH\Views\rekapan.php on line 44.
+ 1 APPPATH\Views\rekapan.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tahun_options', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(72): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 06:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 06:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 06:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 06:56:44 --> Undefined variable $bulan_options
+in APPPATH\Views\rekapan.php on line 36.
+ 1 APPPATH\Views\rekapan.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bulan_options', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 36)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(73): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 06:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 06:57:19 --> Undefined variable $bulan_options
+in APPPATH\Views\rekapan.php on line 36.
+ 1 APPPATH\Views\rekapan.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bulan_options', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 36)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(73): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 07:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 07:01:48 --> Undefined variable $bulan_options
+in APPPATH\Views\rekapan.php on line 36.
+ 1 APPPATH\Views\rekapan.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bulan_options', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 36)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(73): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 07:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 07:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 07:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 07:10:42 --> array_combine(): Argument #1 ($keys) and argument #2 ($values) must have the same number of elements
+in APPPATH\Controllers\Rekapan.php on line 26.
+ 1 APPPATH\Controllers\Rekapan.php(26): array_combine([...], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-10 07:10:57 --> array_combine(): Argument #1 ($keys) and argument #2 ($values) must have the same number of elements
+in APPPATH\Controllers\Rekapan.php on line 26.
+ 1 APPPATH\Controllers\Rekapan.php(26): array_combine([...], [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 07:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 07:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 07:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 07:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 07:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 07:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 07:42:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 07:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 08:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 08:02:03 --> Undefined variable $tahun_options
+in APPPATH\Views\rekapan.php on line 52.
+ 1 APPPATH\Views\rekapan.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tahun_options', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(63): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 08:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 08:02:53 --> Undefined variable $results
+in APPPATH\Views\rekapan.php on line 44.
+ 1 APPPATH\Views\rekapan.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $results', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(63): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 11:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 13:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 14:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 14:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 14:41:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 14:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 14:42:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 14:42:03 --> Undefined variable $results
+in APPPATH\Views\rekapan.php on line 44.
+ 1 APPPATH\Views\rekapan.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $results', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(63): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 14:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 14:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 14:42:19 --> Undefined variable $results
+in APPPATH\Views\rekapan.php on line 44.
+ 1 APPPATH\Views\rekapan.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $results', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(63): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 14:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 14:45:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 14:45:26 --> Undefined variable $results
+in APPPATH\Views\rekapan.php on line 44.
+ 1 APPPATH\Views\rekapan.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $results', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(63): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 14:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 14:47:43 --> Undefined variable $results
+in APPPATH\Views\rekapan.php on line 44.
+ 1 APPPATH\Views\rekapan.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $results', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 44)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(63): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 14:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 14:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 14:54:02 --> Undefined property: stdClass::$jumlah_pending_pengantar_ktp
+in APPPATH\Views\rekapan.php on line 47.
+ 1 APPPATH\Views\rekapan.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jumlah_pending_pengantar_ktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 47)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(64): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 14:54:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 14:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 14:54:59 --> Undefined property: stdClass::$jumlah_pending_pengantar_ktp
+in APPPATH\Views\rekapan.php on line 47.
+ 1 APPPATH\Views\rekapan.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jumlah_pending_pengantar_ktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 47)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(64): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 14:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 14:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 15:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 15:01:31 --> Undefined property: stdClass::$jumlah_pending_pengantar_ktp
+in APPPATH\Views\rekapan.php on line 47.
+ 1 APPPATH\Views\rekapan.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jumlah_pending_pengantar_ktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 47)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(65): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 15:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 15:02:17 --> Undefined property: stdClass::$jumlah_pending_pengantar_ktp
+in APPPATH\Views\rekapan.php on line 47.
+ 1 APPPATH\Views\rekapan.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jumlah_pending_pengantar_ktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 47)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(65): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 15:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 15:02:23 --> Undefined property: stdClass::$jumlah_pending_pengantar_ktp
+in APPPATH\Views\rekapan.php on line 47.
+ 1 APPPATH\Views\rekapan.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jumlah_pending_pengantar_ktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 47)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(65): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 15:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 15:02:24 --> Undefined property: stdClass::$jumlah_pending_pengantar_ktp
+in APPPATH\Views\rekapan.php on line 47.
+ 1 APPPATH\Views\rekapan.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jumlah_pending_pengantar_ktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 47)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(65): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 15:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 15:02:24 --> Undefined property: stdClass::$jumlah_pending_pengantar_ktp
+in APPPATH\Views\rekapan.php on line 47.
+ 1 APPPATH\Views\rekapan.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jumlah_pending_pengantar_ktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 47)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(65): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 15:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 15:02:25 --> Undefined property: stdClass::$jumlah_pending_pengantar_ktp
+in APPPATH\Views\rekapan.php on line 47.
+ 1 APPPATH\Views\rekapan.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jumlah_pending_pengantar_ktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 47)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(65): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 15:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 15:02:25 --> Undefined property: stdClass::$jumlah_pending_pengantar_ktp
+in APPPATH\Views\rekapan.php on line 47.
+ 1 APPPATH\Views\rekapan.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jumlah_pending_pengantar_ktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 47)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(65): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 15:02:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 15:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 22:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 22:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 22:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-10 22:36:41 --> mysqli_sql_exception: Unknown column 'kategori_surat' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\surat\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar...', 'pending')
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#9 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-10 22:36:41 --> Unknown column 'kategori_surat' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `kategori_surat` = :kategori_surat:
+AND `status` = :status:', [...], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar KTP', 'pending')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 22:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-10 22:44:29 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\surat\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar...', 'pending')
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#9 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-10 22:44:29 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND `status` = :status:', [...], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar KTP', 'pending')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 22:45:18 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\surat\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar...', 'pending')
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#9 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-10 22:45:18 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND `status` = :status:', [...], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar KTP', 'pending')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 22:45:19 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\surat\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar...', 'pending')
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#9 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-10 22:45:19 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND `status` = :status:', [...], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar KTP', 'pending')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 22:45:19 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\surat\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar...', 'pending')
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#9 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-10 22:45:19 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND `status` = :status:', [...], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar KTP', 'pending')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 22:45:19 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\surat\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar...', 'pending')
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#9 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-10 22:45:19 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND `status` = :status:', [...], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar KTP', 'pending')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 22:45:20 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\surat\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar...', 'pending')
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#9 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-10 22:45:20 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND `status` = :status:', [...], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar KTP', 'pending')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-10 22:45:20 --> mysqli_sql_exception: Unknown column 'status' in 'where clause' in C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\surat\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\surat\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\surat\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\surat\system\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+#5 C:\xampp\htdocs\surat\app\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+#6 C:\xampp\htdocs\surat\app\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar...', 'pending')
+#7 C:\xampp\htdocs\surat\system\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+#8 C:\xampp\htdocs\surat\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+#9 C:\xampp\htdocs\surat\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\surat\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-08-10 22:45:20 --> Unknown column 'status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = \'Surat Pengantar KTP\'
+AND `status` = \'pending\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `permohonan_surat`
+WHERE `id_kategori_surat` = :id_kategori_surat:
+AND `status` = :status:', [...], false)
+ 5 SYSTEMPATH\Model.php(606): CodeIgniter\Database\BaseBuilder->countAllResults(true)
+ 6 APPPATH\Models\PermohonanSuratModel.php(17): CodeIgniter\Model->countAllResults()
+ 7 APPPATH\Controllers\Rekapan.php(23): App\Models\PermohonanSuratModel->getJumlahStatusByKategori('Surat Pengantar KTP', 'pending')
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 22:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 22:46:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 22:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 22:51:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 22:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 22:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:04:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:07:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:07:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:07:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:21:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 23:29:35 --> Undefined variable $data
+in APPPATH\Views\dataktp.php on line 120.
+ 1 APPPATH\Views\dataktp.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\surat\\app\\Views\\dataktp.php', 120)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dataktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('/dataktp', [], true)
+ 5 APPPATH\Controllers\Dataktp.php(37): view('/dataktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dataktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 23:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 23:30:47 --> Undefined variable $data
+in APPPATH\Views\dataktp.php on line 120.
+ 1 APPPATH\Views\dataktp.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\surat\\app\\Views\\dataktp.php', 120)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dataktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('/dataktp', [], true)
+ 5 APPPATH\Controllers\Dataktp.php(37): view('/dataktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dataktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 23:34:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 23:34:42 --> Undefined variable $data
+in APPPATH\Views\dataktp.php on line 120.
+ 1 APPPATH\Views\dataktp.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\surat\\app\\Views\\dataktp.php', 120)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dataktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('/dataktp', [], true)
+ 5 APPPATH\Controllers\Dataktp.php(37): view('/dataktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dataktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 23:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-10 23:35:58 --> Undefined array key "id_kk"
+in APPPATH\Views\dataktp.php on line 120.
+ 1 APPPATH\Views\dataktp.php(120): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_kk"', 'C:\\xampp\\htdocs\\surat\\app\\Views\\dataktp.php', 120)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dataktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('/dataktp', [], true)
+ 5 APPPATH\Controllers\Dataktp.php(37): view('/dataktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dataktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dataktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-10 23:36:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-10 23:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

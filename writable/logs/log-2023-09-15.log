@@ -1,0 +1,619 @@
+INFO - 2023-09-15 01:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:23:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:23:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:31:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 01:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:04:54 --> Undefined variable $menu_active
+in APPPATH\Views\layout\sidebar.php on line 11.
+ 1 APPPATH\Views\layout\sidebar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu_active', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 11)
+ 2 APPPATH\Views\dashboard.php(13): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard', [], true)
+ 6 APPPATH\Controllers\Auth.php(135): view('dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-09-15 02:04:55 --> Undefined variable $menu_active
+in APPPATH\Views\layout\sidebar.php on line 11.
+ 1 APPPATH\Views\layout\sidebar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu_active', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 11)
+ 2 APPPATH\Views\dashboard.php(13): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard', [], true)
+ 6 APPPATH\Controllers\Auth.php(135): view('dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:08:25 --> Undefined variable $menu_active
+in APPPATH\Views\layout\sidebar.php on line 11.
+ 1 APPPATH\Views\layout\sidebar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu_active', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 11)
+ 2 APPPATH\Views\dashboard.php(13): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard', [], true)
+ 6 APPPATH\Controllers\Auth.php(135): view('dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:08:37 --> Undefined variable $menu_active
+in APPPATH\Views\layout\sidebar.php on line 11.
+ 1 APPPATH\Views\layout\sidebar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu_active', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 11)
+ 2 APPPATH\Views\dashboard.php(13): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard', [], true)
+ 6 APPPATH\Controllers\Auth.php(135): view('dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:13:05 --> Undefined variable $menu_active
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu_active', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\dashboard.php(13): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard', [], true)
+ 6 APPPATH\Controllers\Auth.php(135): view('dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:15:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:15:40 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\layout\sidebar.php on line 30.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard', [], true)
+ 4 APPPATH\Controllers\Auth.php(135): view('dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:16:33 --> syntax error, unexpected token "<", expecting end of file
+in APPPATH\Views\layout\sidebar.php on line 30.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard', [], true)
+ 4 APPPATH\Controllers\Auth.php(135): view('dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:17:50 --> Undefined variable $kategori
+in APPPATH\Views\kategori.php on line 126.
+ 1 APPPATH\Views\kategori.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\surat\\app\\Views\\kategori.php', 126)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\kategori.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('/kategori', [], true)
+ 5 APPPATH\Controllers\Kategori.php(37): view('/kategori', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Kategori->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:21:27 --> Undefined variable $menu_active
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu_active', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\rekapan.php(15): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 6 APPPATH\Controllers\Rekapan.php(54): view('rekapan', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:22:23 --> Undefined variable $menu_active
+in APPPATH\Views\layout\sidebar.php on line 29.
+ 1 APPPATH\Views\layout\sidebar.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu_active', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 29)
+ 2 APPPATH\Views\rekapan.php(15): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 6 APPPATH\Controllers\Rekapan.php(54): view('rekapan', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:31:29 --> Undefined variable $menu_active
+in APPPATH\Views\layout\sidebar.php on line 13.
+ 1 APPPATH\Views\layout\sidebar.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu_active', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 13)
+ 2 APPPATH\Views\rekapan.php(15): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 6 APPPATH\Controllers\Rekapan.php(56): view('rekapan', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:33:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:33:31 --> Undefined variable $kategori
+in APPPATH\Views\layout\sidebar.php on line 10.
+ 1 APPPATH\Views\layout\sidebar.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 10)
+ 2 APPPATH\Views\rekapan.php(15): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 6 APPPATH\Controllers\Rekapan.php(56): view('rekapan', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:34:29 --> Undefined variable $kategori
+in APPPATH\Views\layout\sidebar.php on line 10.
+ 1 APPPATH\Views\layout\sidebar.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 10)
+ 2 APPPATH\Views\rekapan.php(15): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 6 APPPATH\Controllers\Rekapan.php(56): view('rekapan', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:34:54 --> Undefined variable $kategori
+in APPPATH\Views\rekapan.php on line 19.
+ 1 APPPATH\Views\rekapan.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 19)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(56): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:36:16 --> Undefined array key "kategori"
+in APPPATH\Views\rekapan.php on line 19.
+ 1 APPPATH\Views\rekapan.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kategori"', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 19)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(56): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:36:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:36:40 --> Cannot access offset of type string on string
+in APPPATH\Views\rekapan.php on line 48.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 4 APPPATH\Controllers\Rekapan.php(56): view('rekapan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:37:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:38:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:39:46 --> Cannot access offset of type string on string
+in APPPATH\Views\rekapan.php on line 48.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 4 APPPATH\Controllers\Rekapan.php(56): view('rekapan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:41:05 --> Cannot access offset of type string on string
+in APPPATH\Views\rekapan.php on line 48.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 4 APPPATH\Controllers\Rekapan.php(56): view('rekapan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:42:08 --> Undefined array key "menu_active"
+in APPPATH\Views\rekapan.php on line 19.
+ 1 APPPATH\Views\rekapan.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "menu_active"', 'C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php', 19)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\rekapan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('rekapan', [], true)
+ 5 APPPATH\Controllers\Rekapan.php(56): view('rekapan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Rekapan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Rekapan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:46:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:48:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:48:27 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\dashboard.php(13): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard', [], true)
+ 6 APPPATH\Controllers\Auth.php(135): view('dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:51:20 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\laporanktp.php(26): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 6 APPPATH\Controllers\Laporanktp.php(28): view('laporanktp', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:52:10 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\laporanktp.php(26): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 6 APPPATH\Controllers\Laporanktp.php(28): view('laporanktp', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:52:17 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\laporanktp.php(26): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 6 APPPATH\Controllers\Laporanktp.php(28): view('laporanktp', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:54:06 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\laporanktp.php(26): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 6 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:55:40 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\laporanktp.php(26): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 6 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:56:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:56:48 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\laporanktp.php(26): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [...], true)
+ 6 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:56:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:56:54 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\laporanktp.php(26): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [...], true)
+ 6 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:57:21 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\laporanktp.php(26): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [...], true)
+ 6 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 02:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-15 02:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 02:59:23 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\laporanktp.php(26): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [...], true)
+ 6 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:03:11 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\laporanktp.php(26): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [...], true)
+ 6 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:04:21 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 12.
+ 1 APPPATH\Views\layout\sidebar.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 12)
+ 2 APPPATH\Views\laporanktp.php(26): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [...], true)
+ 6 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:06:17 --> Undefined variable $dataktp
+in APPPATH\Views\laporanktp.php on line 99.
+ 1 APPPATH\Views\laporanktp.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php', 99)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 5 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:06:41 --> Undefined array key "nik"
+in APPPATH\Views\laporanktp.php on line 102.
+ 1 APPPATH\Views\laporanktp.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nik"', 'C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php', 102)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 5 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:07:08 --> Undefined array key "nik"
+in APPPATH\Views\laporanktp.php on line 102.
+ 1 APPPATH\Views\laporanktp.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nik"', 'C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php', 102)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 5 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:07:18 --> Undefined variable $dataktp
+in APPPATH\Views\laporanktp.php on line 99.
+ 1 APPPATH\Views\laporanktp.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php', 99)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 5 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:08:10 --> Undefined array key "nik"
+in APPPATH\Views\laporanktp.php on line 102.
+ 1 APPPATH\Views\laporanktp.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nik"', 'C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php', 102)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 5 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:08:47 --> Undefined variable $dataktp
+in APPPATH\Views\laporanktp.php on line 99.
+ 1 APPPATH\Views\laporanktp.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php', 99)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 5 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:08:57 --> Undefined array key "nik"
+in APPPATH\Views\laporanktp.php on line 102.
+ 1 APPPATH\Views\laporanktp.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nik"', 'C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php', 102)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 5 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:09:31 --> Undefined array key "nik"
+in APPPATH\Views\laporanktp.php on line 102.
+ 1 APPPATH\Views\laporanktp.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nik"', 'C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php', 102)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 5 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:09:44 --> Undefined variable $dataktp
+in APPPATH\Views\laporanktp.php on line 99.
+ 1 APPPATH\Views\laporanktp.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php', 99)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 5 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:10:29 --> Undefined variable $dataktp
+in APPPATH\Views\laporanktp.php on line 99.
+ 1 APPPATH\Views\laporanktp.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataktp', 'C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php', 99)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 5 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:11:18 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 11.
+ 1 APPPATH\Views\layout\sidebar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 11)
+ 2 APPPATH\Views\dashboard.php(13): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard', [], true)
+ 6 APPPATH\Controllers\Auth.php(132): view('dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:11:39 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 11.
+ 1 APPPATH\Views\layout\sidebar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 11)
+ 2 APPPATH\Views\dashboard.php(13): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard', [], true)
+ 6 APPPATH\Controllers\Auth.php(132): view('dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:12:30 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 11.
+ 1 APPPATH\Views\layout\sidebar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 11)
+ 2 APPPATH\Views\dashboard.php(13): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard', [...], true)
+ 6 APPPATH\Controllers\Auth.php(133): view('dashboard', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:12:57 --> Undefined variable $menu
+in APPPATH\Views\layout\sidebar.php on line 11.
+ 1 APPPATH\Views\layout\sidebar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php', 11)
+ 2 APPPATH\Views\dashboard.php(13): include('C:\\xampp\\htdocs\\surat\\app\\Views\\layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard', [...], true)
+ 6 APPPATH\Controllers\Auth.php(133): view('dashboard', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Auth->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:13:01 --> Undefined array key "nik"
+in APPPATH\Views\laporanktp.php on line 102.
+ 1 APPPATH\Views\laporanktp.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nik"', 'C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php', 102)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 5 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-15 03:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-15 03:19:46 --> Undefined array key "nik"
+in APPPATH\Views\laporanktp.php on line 102.
+ 1 APPPATH\Views\laporanktp.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nik"', 'C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php', 102)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\surat\\app\\Views\\laporanktp.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporanktp', [], true)
+ 5 APPPATH\Controllers\Laporanktp.php(29): view('laporanktp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporanktp->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporanktp))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
